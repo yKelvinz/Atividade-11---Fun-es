@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularImpares(){
+  var num1 = parseInt(prompt("Insira o primeiro número (deve ser menor que o segundo número)"));
+  var num2 = parseInt(prompt("Insira o segundo número (deve ser maior que o primeiro número)"));
+
+  var soma = 0;
+
+  for (var i = num1; i <= num2; i++) {
+    if (i % 2 != 0) {
+      soma += i;
+    }
+  }
+
+  alert("A soma dos números ímpares no intervalo é " + soma);
+}
+
+calcularImpares()
+
+    </script>
+</body>
+</html>

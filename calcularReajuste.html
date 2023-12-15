@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><Calculadora Simples/title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function calcularReajuste(){
+         var salario = parseFloat(prompt("Insira o salário do colaborador"));
+  var reajuste;
+  var percentual;
+
+  if (salario <= 280) {
+    percentual = 20;
+  } else if (salario > 280 && salario <= 700) {
+    percentual = 15;
+  } else if (salario > 700 && salario <= 1500) {
+    percentual = 10;
+  } else {
+    percentual = 5;
+  }
+
+  reajuste = salario * (percentual / 100);
+  var novoSalario = salario + reajuste;
+
+  alert("Salário antes do reajuste: R$ " + salario.toFixed(2) +
+        "\nPercentual de aumento aplicado: " + percentual + "%" +
+        "\nValor do aumento: R$ " + reajuste.toFixed(2) +
+        "\nNovo salário após o aumento: R$ " + novoSalario.toFixed(2));
+}
+
+calcularReajuste()
+
+
+
+
+    </script>
+</body>
+</html>

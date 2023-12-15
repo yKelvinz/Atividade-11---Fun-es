@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema Bancário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function calcularCompra(){
+       var saldoInicial = prompt("Insira o saldo inicial da conta");
+  var valorCompra = prompt("Insira o valor da compra que deseja realizar");
+
+  if (valorCompra <= saldoInicial) {
+    var saldoAtual = saldoInicial - valorCompra;
+    alert("A compra ocorreu corretamente. Seu saldo atual é R$ " + saldoAtual.toFixed(2));
+  } else {
+    alert("Saldo insuficiente");
+  }
+}
+ calcularCompra()
+    </script>
+</body>
+</html>

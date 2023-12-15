@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reajuste Salarial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function calcular(){
+  var num1 = parseInt(prompt("Insira o primeiro número"));
+  var num2 = parseInt(prompt("Insira o segundo número"));
+  var operacao = prompt("Insira a operação a ser realizada (+, -, * ou /)");
+
+  var resultado;
+  if (operacao == "+") {
+    resultado = num1 + num2;
+  } else if (operacao == "-") {
+    resultado = num1 - num2;
+  } else if (operacao == "*") {
+    resultado = num1 * num2;
+  } else if (operacao == "/") {
+    if (num2 != 0) {
+      resultado = num1 / num2;
+    } else {
+      alert("Erro: divisão por zero");
+    }
+  } else {
+    alert("Operação inválida");
+  }
+
+  alert("O resultado da operação é " + resultado);
+}
+
+calcular()
+    </script>
+</body>
+</html>

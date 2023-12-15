@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label for="numero1">Digite o primeiro número:</label>
+    <input type="number" id="numero1">
+    <br><br>
+    <label for="numero2">Digite o segundo número:</label>
+    <input type="number" id="numero2">
+    <br><br>
+    <button onclick="calcular()">Calcular Produto</button>
+
+    <script>
+        function CalcularProduto(a, b) {
+    return a * b;
+}
+
+function calcular() {
+    const numero1 = document.getElementById('numero1').value;
+    const numero2 = document.getElementById('numero2').value;
+
+    const num1 = parseFloat(numero1);
+    const num2 = parseFloat(numero2);
+
+    if (!isNaN(num1) && !isNaN(num2)) {
+        const resultado = CalcularProduto(num1, num2);
+        alert("O resultado da multiplicação é: " + resultado);
+    } else {
+        alert("Por favor, insira números válidos!");
+    }
+}
+    </script>
+</body>
+</html>
